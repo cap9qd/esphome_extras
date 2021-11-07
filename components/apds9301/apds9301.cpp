@@ -34,7 +34,7 @@ void APDS9301Sensor::dump_config() {
     ESP_LOGE(TAG, "Communication with APDS9301 failed!");
   }
 
-  static const char *scales[] = {"16", "4.024", "0.546", "1", "0.252", "0.0034"};
+  static const char *scales[] PROGMEM = {"16", "4.024", "0.546", "1", "0.252", "0.0034"};
   ESP_LOGCONFIG(TAG, "  Resolution: %sx", scales[this->resolution_]);
   LOG_UPDATE_INTERVAL(this);
 }
